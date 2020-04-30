@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect("mongodb://OnTheRocks:LuckySquirt1@ds013926.mlab.com:13926/heroku_pgjm135k", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
@@ -122,16 +122,6 @@ let workoutSeed = [
       }
     ]
   },
-  {
-    day: new Date(new Date().setDate(new Date().getDate() - 1)),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Bench",
-        duration: 30,
-      }
-    ]
-  }
 ];
 
 db.Workout.deleteMany({})
